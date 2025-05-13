@@ -1,0 +1,27 @@
+.inventory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 55px);
+}
+
+    .inventory-cell {
+        width: var(--cell-size);
+        height: var(--cell-size);
+        background-color: var(--cell-background-color);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-width: 3px;
+        border-style: solid;
+        border-color:
+                var(--cell-left-top-border-color)
+                var(--cell-right-bottom-border-color)
+                var(--cell-right-bottom-border-color)
+                var(--cell-left-top-border-color);
+    }
+
+        .resource-image {
+            max-width: 100%;
+            height: auto;
+        }

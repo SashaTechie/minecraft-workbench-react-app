@@ -1,0 +1,56 @@
+.workbench {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+
+    align-self: center;
+}
+
+.workbench-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 50px);
+    grid-template-rows: repeat(3, 50px);
+    gap: 5px;
+}
+
+.workbench-cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    background-color: var(--cell-background-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color:
+            var(--cell-left-top-border-color)
+            var(--cell-right-bottom-border-color)
+            var(--cell-right-bottom-border-color)
+            var(--cell-left-top-border-color);
+}
+
+.arrow {
+    width: 100px;
+    height: auto;
+}
+
+.result-cell {
+    width: var(--result-cell-size);
+    height: var(--result-cell-size);
+    background-color: var(--cell-background-color);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-width: 3px;
+    border-style: solid;
+    border-color:
+            var(--cell-left-top-border-color)
+            var(--cell-right-bottom-border-color)
+            var(--cell-right-bottom-border-color)
+            var(--cell-left-top-border-color);
+}

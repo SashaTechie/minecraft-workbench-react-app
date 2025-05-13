@@ -1,0 +1,112 @@
+/*
+1. Системные или универсальные свойства.
+Сюда входят свойства, влияющие на общую структуру элемента.
+Пример: display, position, flex, grid, float, clear.
+
+2. Размеры и расположение.
+Свойства, которые определяют размеры элемента или его позиционирование на странице.
+Пример: width, height, margin, padding, top, left, right, bottom, max-width, min-width.
+
+3. Шрифты и текст.
+Все свойства, связанные с типографикой.
+Пример: font-family, font-size, font-weight, line-height, text-align, text-transform, letter-spacing.
+
+4. Границы
+Свойства, связанные с границами элементов.
+Пример: border, border-width, border-style, border-color, border-radius.
+
+5. Фоновые свойства.
+Свойства, отвечающие за оформление фона.
+Пример: background-color, background-image, background-position, background-repeat.
+
+6. Тени и эффекты.
+Свойства, которые добавляют тени и другие визуальные эффекты.
+Пример: box-shadow, text-shadow, filter, opacity.
+
+7. Цвета.
+Свойства, определяющие цветовую гамму элементов.
+Пример: color, border-color, background-color, text-decoration-color, outline-color.
+
+8.Интерактивные и анимационные эффекты.
+Свойства для взаимодействия с элементом или для добавления анимаций.
+Пример: cursor, transition, transform, animation.
+
+9.Медиа-запросы.
+Свойства, определяющие как элемент будет вести себя при изменении условий устройства или экрана.
+Пример: @media, min-width, max-width, и подобные.
+ */
+
+/* Словарь выравнивания
+text-align: Выравнивает текст и инлайновые элементы по горизонтали.
+vertical-align: Выравнивает элементы по вертикали относительно их соседей (чаще используется для инлайновых элементов).
+
+align-items (для flexbox): Выравнивает элементы по вертикали внутри flex.
+justify-content (для flexbox): Выравнивает элементы по горизонтали внутри flex.
+align-self (для flexbox): Перезаписывает align-items для конкретного элемента внутри flex.
+
+align-content (для flexbox и grid): Выравнивает несколько строк или колонок внутри flex или grid по вертикали.
+place-items (для grid): Выравнивает все элементы по обеим осям внутри grid (например, center, start, end, stretch).
+justify-items (для grid): Выравнивает элементы внутри сетки по горизонтали.
+ */
+
+@font-face {
+    font-family: "Minecraft";
+    src: url("fonts/minecraft.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --font-minecraft: "Minecraft";
+
+    --container-left-top-border-color: #ffffff;
+    --container-right-bottom-border-color: #555555;
+
+    --background-color: #c6c6c6;
+
+    --header-alignment: left;
+    --header-text-color: #1b1b1b;
+    --header-text-size: 30px;
+
+    --cell-size: 50px;
+    --cell-background-color: #8b8b8b;
+    --cell-left-top-border-color: #373737;
+    --cell-right-bottom-border-color: #ffffff;
+
+    --result-cell-size: calc(var(--cell-size) + 20px);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+
+    background-color: var(--background-color);
+    border-width: 3px;
+    border-style: solid;
+    border-color:
+            var(--container-left-top-border-color)
+            var(--container-right-bottom-border-color)
+            var(--container-right-bottom-border-color)
+            var(--container-left-top-border-color);
+}
+
+.header {
+    font-family: var(--font-minecraft), serif;
+    font-size: var(--header-text-size);
+    color: var(--header-text-color);
+}
+
+.crafting {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.RecipesBook, .Workbench {
+    flex: 1;
+    height: 100%;
+}
